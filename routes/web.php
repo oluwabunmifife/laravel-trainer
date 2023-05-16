@@ -16,12 +16,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+
+    $users = DB::table('users')->get();
+
     //Inserting
     // $user = DB::insert('insert into users (name, email, password) values (?, ?, ?)', 
     //         ['Dayle', 'dayle@you.com', 'Passerword']);
 
     //Selecting
-    $users = DB::select('select * from users ');
+    //$users = DB::select('select * from users ');
 
     //Deleting
     //$user = DB::delete('delete from users where id=3');
